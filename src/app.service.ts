@@ -13,6 +13,10 @@ export class AppService {
   findAll():User[]{
     return this.users;
   }
+
+  delete(): User[]{
+    return this.users.splice(0,4);
+  }
   //to make posts
   // async addProducts(){
   //    const productDetails = {

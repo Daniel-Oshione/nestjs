@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { User } from './interface/user.interface';
 
@@ -23,5 +23,10 @@ export class AppController {
   @Get()
   async findAllUsers(): Promise<User[]>{
     return await this.appService.findAll();
+  }
+
+  @Delete('delete')
+  async deleteUser(){
+    return await this.appService.delete();
   }
 }
