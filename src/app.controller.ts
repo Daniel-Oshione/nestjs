@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { User } from './interface/user.interface';
 
@@ -16,6 +16,7 @@ export class AppController {
   //   return this.appService.addProducts();
   // }
   @Post('user')
+  @HttpCode(204)
   async createUser(@Body() payload){
    await this.appService.create(payload);
   }

@@ -17,6 +17,7 @@ export class AppService {
   delete(): User[]{
     return this.users.splice(0,4);
   }
+};
   //to make posts
   // async addProducts(){
   //    const productDetails = {
@@ -56,4 +57,3 @@ export class AppService {
   //     goods: productDetails
   //    };
   // };
-};
